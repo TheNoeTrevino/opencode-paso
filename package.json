@@ -1,5 +1,5 @@
 {
-  "name": "opencode-paso-session",
+  "name": "opencode-paso",
   "version": "1.0.0",
   "description": "OpenCode plugin for paso workflow context injection",
   "type": "module",
@@ -13,18 +13,27 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "bun build index.ts --outdir dist --target node",
     "prepublishOnly": "bun run build",
     "test": "bun test"
   },
-  "keywords": ["opencode", "paso", "kanban", "workflow", "plugin", "ai"],
+  "keywords": [
+    "opencode",
+    "paso",
+    "kanban",
+    "workflow",
+    "plugin",
+    "ai"
+  ],
   "author": "TheNoeTrevino",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thenoetrevino/opencode-paso-session.git"
+    "url": "git+https://github.com/thenoetrevino/opencode-paso.git"
   },
   "peerDependencies": {
     "@opencode-ai/plugin": ">=0.15.0",

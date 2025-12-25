@@ -1,4 +1,4 @@
-# opencode-paso-session
+# opencode-paso
 
 OpenCode plugin for [paso](https://github.com/thenoetrevino/paso) workflow context injection.
 
@@ -11,7 +11,7 @@ Dynamically runs `paso tutorial` at session start, ensuring AI agents always hav
 ## Installation
 
 ```bash
-bun add opencode-paso-session
+bun add opencode-paso
 ```
 
 Or use `paso setup opencode` to auto-configure.
@@ -22,7 +22,7 @@ Add to your `opencode.json`:
 
 ```json
 {
-  "plugin": ["opencode-paso-session"]
+  "plugin": ["opencode-paso"]
 }
 ```
 

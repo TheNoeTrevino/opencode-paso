@@ -14,7 +14,7 @@ import type { Event, EventSessionCreated } from "@opencode-ai/sdk"
  * Add to your opencode.json:
  * ```json
  * {
- *   "plugin": ["opencode-paso-session"]
+ *   "plugin": ["opencode-paso"]
  * }
  * ```
  */
@@ -32,7 +32,7 @@ export const OpenCodePasoSession: Plugin = async (ctx) => {
           const pasoContext = await $`paso tutorial`.text()
 
           if (!pasoContext || pasoContext.trim().length === 0) {
-            console.warn("[opencode-paso-session] paso tutorial returned empty output")
+            console.warn("[opencode-paso] paso tutorial returned empty output")
             return
           }
 
@@ -49,7 +49,7 @@ export const OpenCodePasoSession: Plugin = async (ctx) => {
           })
         } catch (error) {
           // paso might not be installed or not in PATH
-          console.error("[opencode-paso-session] Failed to inject context:", error)
+          console.error("[opencode-paso] Failed to inject context:", error)
         }
       }
     }
