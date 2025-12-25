@@ -18,7 +18,10 @@ import type { Event, EventSessionCreated } from "@opencode-ai/sdk"
  * }
  * ```
  */
-export const OpenCodePasoSession: Plugin = async (ctx) => {
+// Only use default export to avoid duplicate plugin loading
+// OpenCode's plugin loader iterates over all exports, so having both
+// named and default exports causes the plugin to run twice
+const OpenCodePasoSession: Plugin = async (ctx) => {
   const { client, $ } = ctx
 
   return {
